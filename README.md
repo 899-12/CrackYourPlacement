@@ -65,3 +65,7 @@ class Solution:
         if first_col_has_zero:
             for i in range(m):
                 matrix[i][0] = 0
+solution=Solution()
+matrix1 = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
+solution.setZeroes(matrix1)
+print(matrix1)

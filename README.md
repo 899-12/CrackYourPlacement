@@ -91,3 +91,52 @@ After all non-zero elements have been moved to the beginning of the array, the f
 n is the number of elements in the array. This is because the function processes each element of the array exactly twice: once to move non-zero elements and once to fill in zeros.
 #### Space Complexity: 
 𝑂(1), as the function uses a constant amount of extra space regardless of the input size.
+## 3. Best Time to Buy and Sell Stock
+
+### Description
+
+The `maxProfit` function is designed to determine the maximum profit that can be achieved from a single buy and sell transaction of a given stock. The function takes a list of prices, where `prices[i]` represents the price of the stock on the `i`th day. The goal is to find the maximum profit by choosing a single day to buy one stock and a different day in the future to sell that stock. If no profit can be made, the function returns 0.
+
+### Algorithm
+
+1. **Initialize Variables**:
+   - `buy_price` is initialized to the first element in `prices`, representing the minimum price to buy the stock initially.
+   - `profit` is initialized to 0, representing the maximum profit that can be achieved.
+
+2. **Iterate through Prices**:
+   - For each price in `prices` starting from the second element, compare it with the current `buy_price`.
+   - If the current price is lower than `buy_price`, update `buy_price` to the current price.
+   - Calculate the potential profit by subtracting `buy_price` from the current price.
+   - Update `profit` if the calculated profit is higher than the current `profit`.
+
+3. **Return Result**:
+   - Return the `profit` as the result.
+
+### Complexity
+
+- **Time Complexity**: \(O(n)\), where \(n\) is the number of elements in the `prices` list. This is because the function processes each element of the list exactly once.
+- **Space Complexity**: \(O(1)\), as the function uses a constant amount of extra space regardless of the input size.
+
+### Code
+
+```python
+from typing import List
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        buy_price = prices[0]
+        profit = 0
+        for i in prices[1:]:
+            if buy_price > i:
+                buy_price = i
+            profit = max(profit, i - buy_price)
+        return profit
+
+# Example usage
+solution = Solution()
+prices1 = [7, 1, 5, 3, 6, 4]
+print(solution.maxProfit(prices1))  # Output: 5
+
+prices2 = [7, 6, 4, 3, 1]
+print(solution.maxProfit(prices2))  # Output: 0
+```

@@ -21,6 +21,10 @@ The solution uses the first row and first column of the matrix to mark the rows 
 3. **Zero Out Cells Based on Markers**: Zero out the necessary cells based on the markers in the first row and column.
 4. **Final Zeroing of First Row and First Column**: Zero out the first row and column if they initially contained any zeros.
 
+### Complexity
+- **Time Complexity**: \(O(m \times n)\), where \(m\) is the number of rows and \(n\) is the number of columns.
+- **Space Complexity**: \(O(1)\) as it uses a constant amount of extra space.
+
 ### Code Implementation
 
 ```python
@@ -66,5 +70,4 @@ solution = Solution()
 matrix1 = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
 solution.setZeroes(matrix1)
 print(matrix1)  # Output: [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
-```python
-## Complexity
+```

@@ -69,31 +69,32 @@ solution=Solution()
 matrix1 = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
 solution.setZeroes(matrix1)
 print(matrix1)
-## 2. Move Zeroes
 
-### Description
+# **Move Zeroes**
+
+## **Description**
 
 The `moveZeroes` function is designed to move all zeros in a given integer array `nums` to the end of the array while maintaining the relative order of the non-zero elements. The function operates in-place, meaning it modifies the input array directly without using extra space for another array.
 
-### Algorithm
+## **Algorithm**
 
 The function employs a two-pass approach:
 
-#### First Pass:
+### **First Pass:**
 
 - The function initializes a pointer `last_non_zero` to track the position where the next non-zero element should be placed.
 - It iterates through the array and whenever a non-zero element is encountered, it places this element at the position indicated by `last_non_zero` and increments `last_non_zero`.
 
-#### Second Pass:
+### **Second Pass:**
 
 - After all non-zero elements have been moved to the beginning of the array, the function iterates from the `last_non_zero` position to the end of the array, filling these positions with zeros.
 
-### Complexity
+## **Complexity**
 
 - **Time Complexity**: \(O(n)\), where \(n\) is the number of elements in the array. This is because the function processes each element of the array exactly twice: once to move non-zero elements and once to fill in zeros.
 - **Space Complexity**: \(O(1)\), as the function uses a constant amount of extra space regardless of the input size.
 
-### Code
+## **Code**
 
 ```python
 from typing import List
@@ -107,3 +108,4 @@ class Solution:
                 last_non_zero += 1
         for i in range(last_non_zero, len(nums)):
             nums[i] = 0
+

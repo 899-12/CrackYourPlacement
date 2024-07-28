@@ -87,9 +87,7 @@ It iterates through the array and whenever a non-zero element is encountered, it
 After all non-zero elements have been moved to the beginning of the array, the function iterates from the last_non_zero position to the end of the array, filling these positions with zeros.
 ### Complexity
 #### Time Complexity: 
-𝑂(𝑛)
-O(n), where 𝑛
+𝑂(𝑛), where 𝑛
 n is the number of elements in the array. This is because the function processes each element of the array exactly twice: once to move non-zero elements and once to fill in zeros.
 #### Space Complexity: 
-𝑂(1)
-O(1), as the function uses a constant amount of extra space regardless of the input size.
+𝑂(1), as the function uses a constant amount of extra space regardless of the input size.

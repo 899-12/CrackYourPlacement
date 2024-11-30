@@ -55,3 +55,36 @@ if __name__ == "__main__":
 
     # Calculate the height of the tree
     print("Height of the tree:", Node.height(root))
+
+```
+# 2.Binary Tree Size Calculation
+This Python program defines a binary tree structure using the Node class and calculates the size of the binary tree, which is the total number of nodes in the tree. The size is determined using a recursive approach.
+
+Problem Overview
+Given a binary tree, the size of the tree is defined as the number of nodes present in the tree. A node is counted if it is not None, and the total size is the sum of the nodes in the left subtree, right subtree, and the current node.
+
+### Binary Tree Representation:
+A binary tree is made up of nodes, where each node has:
+
+**Data:** Stores the value or information.
+**Left Child:** Points to the left child node.
+**Right Child:** Points to the right child node.
+In this code, a binary tree is constructed and its size is calculated by traversing the tree.
+
+### Code Explanation
+Node Class
+The Node class defines the structure of a binary tree node:
+
+__init__(self, data): Initializes the node with a given value (data), and sets the left and right children to None.
+size(root): A static method that calculates the size of the binary tree starting from the root node. The method works recursively:
+If the node is None, return 0.
+Recursively calculate the size of the left and right subtrees.
+The total size is the size of the left subtree + the size of the right subtree + 1 (for the current node).
+
+#### Complexity Analysis
+### Time Complexity:
+The function size(root) traverses each node in the tree exactly once.
+For each node, the size of the left and right subtrees is calculated recursively.
+Thus, the time complexity of this code is O(n), where n is the number of nodes in the tree.
+### Space Complexity:
+The space complexity is O(h), where h is the height of the tree, due to the recursive call stack. In the worst case, the height of the tree is O(n) (for a skewed tree), but in the best case (a balanced tree), the height is O(log n).

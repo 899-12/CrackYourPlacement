@@ -1,3 +1,12 @@
+"""
+Problem: Valid Parentheses (Leetcode #20)
+- Checks if a string of brackets is valid.
+- Uses a stack to ensure correct matching.
+- Time Complexity: O(n)
+- Space Complexity: O(n)
+"""
+
+
 class Solution:
     def isValid(self, s: str) -> bool:  # Added 'self' parameter
         stack = []

@@ -1,6 +1,11 @@
 """ Given two strings needle and haystack, return the
    index of the first occurrence of needle in haystack, or
   -1 if needle is not part of haystack.
+  Time Complexity:
+🔴 O(N * M) (where N is len(haystack), M is len(needle)) in the worst case.
+
+Space Complexity:
+✅ O(1) (no extra space used).
 """
 
 class Solution:
